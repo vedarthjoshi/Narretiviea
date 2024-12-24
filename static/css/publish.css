@@ -1,0 +1,103 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Jacquard+12&family=Macondo&display=swap'); */
+
+.darkmode {
+    --bg: #ddd; 
+    /* insted of rgb(64, 64, 64) */
+    --editor-bg: #fff;
+    /* insted of rgb(35, 35, 35) */
+    --editor-btn: #ababab;
+    /* insted of rgb(12, 12, 12) */
+    --editor-btn-hover: #f3f3f3;
+    /* insted of #3f3f3f */
+    --text: black;
+    
+}
+
+:root{
+    /* --bg: rgb(64, 64, 64);  */
+    --bg: rgb(12, 12, 12); 
+    /* insted of #ddd */
+    --editor-bg: rgb(35, 35, 35);
+    /* insted of #fff */
+    --editor-btn: rgb(12, 12, 12);
+    --editor-btn: rgb(64, 64, 64);
+    /* insted of #eee */
+    --editor-btn-hover: #000000;
+    /* insted of #f3f3f3 */
+    --text: white;
+}
+
+body{
+    background-color: var(--bg);
+    color: white;
+}
+
+.container{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    color: white;
+    /* background-color: #000000; */
+}
+
+.heading{
+    font-size: 3rem;
+    font-family: alagard;
+    text-align: center;
+}
+
+.heading2{
+    font-size: 2rem;
+    text-align: center;
+}
+
+#story-title{
+    font-size: 3rem;
+    font-family: Castellar;
+    text-align: center;
+    margin-left: 1vw;
+    /* margin-left: 15vw; */
+}
+
+#story-author{
+    margin-left: 1vw;
+    font-size: 2rem;
+    text-align: left;
+    /* margin-left: 15vw; */
+}
+
+.ratingshii{
+    font-size: 1.5rem;
+    margin-left: 1vw;
+    margin-bottom: 5vh;
+    /* max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto; */
+}
+
+#story-content{
+    margin-top: 5vh;
+    margin-left: 1vw;
+    font-size: 1.7rem;
+}
+
+.save{
+    border: 2px solid rgb(118, 118, 255);
+    font-family: alagard;
+    margin-top: 5vh;
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    font-size: 2rem;
+    position: fixed;
+    top: 1%;
+    right: 2%;
+}
+
+.container button:hover{
+    color: white;
+    background: rgb(115, 76, 125);
+}
+
+.ratern{
+    font-size: 1.5rem;
+}

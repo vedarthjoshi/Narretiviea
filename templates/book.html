@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>{{ book.title }}</title>
+    <link rel="stylesheet" href="../static/css/publish.css">
+</head>
+<body>
+    <div class="container">
+        <div id="story-title">
+            <h1>{{ book.title }}</h1>
+        </div>
+        <div id="story-author">
+
+            <h3>Author: {{ book.author }}</h3>
+
+            <p class="ratern">Rating: <span id="current-rating">{{ book.rating }}</span> <i class='bx bxs-star'></i></p>
+        </div>
+        
+        <hr>
+        <div id="story-content">
+            {{ book.story|safe }}
+        </div>
+        <hr>
+        <div class="ratingshii">
+            <label for="rating">Rate this book:</label>
+            <input type="number" id="rating" min="0" max="5" step="0.5" value="{{ book.rating }}">
+            <button onclick="submitRating()">Submit Rating</button>
+        </div>
+    </div>
+        
+        <script>
+        function submitRating() {
+            const rating = document.getElementById('rating').value;
+            fetch(window.location.href, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ rating: parseFloat(rating) })
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.status === "success") {
+                    document.getElementById('current-rating').textContent = rating;
+                    alert(result.message);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'> -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="../static/css/editor.css">
+	<title>Text Editor</title>
+</head>
+
+<body>
+	
+	<nav class="navigator">
+		<a href="/"><i class='bx bxs-home'></i> Home </a> 
+		<!-- Home -->
+		<a href="/"><i class='bx bx-cube-alt'></i> About </a>
+		<!-- About -->
+		<a href="/library"><i class='bx bx-book-alt'></i> Library </a>
+		<!-- Library -->
+		<a href="#toolbar" onclick="publishStory()"><i class='bx bx-mail-send'></i> Publish </a>
+		<!-- <button onclick="publishStory()" title="Publish"><i class='bx bx-mail-send'></i> Publish</button> -->
+
+		<!-- Publish -->
+		
+	</nav>
+
+	<div class="con">
+        <input type="checkbox" name="theme" id="check">
+        <label for="check" class="toggle"></label>
+    </div>
+
+	<div class="book-title">
+		<h1 id="title" title="BOOK TITLE">UntitledBook</h1>
+		<button id="titleBtn" onclick="editTitle(true)" title="ITS FUCKING WRITTEN ON THE BUTTON">Edit Title</button>
+	</div>
+	
+	<div id="popup" class="popup">
+		<div class="popup-content">
+			<!-- <span class="popup-close" onclick="closePopup()">LMAO&times;</span> -->
+			<p id="popup-message">msg</p>
+			<div class="popupdiv" style="visibility: hidden;">
+				<button onclick="closePopup()" style="visibility: hidden;" id="closePopupButton">BACK</button>
+				<button onclick="fileHandle('pdf')">SAVE AS PDF</button>
+				<button onclick="fileHandle('txt')">SAVE AS TXT</button>
+				<button onclick="fileHandle('new')">CLEAR</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="edit">
+		<div class="container">
+			<div class="toolbar" id="start">
+				<div class="head">
+					<!-- <input type="text" placeholder="Filename" value="untitled" id="filename"> -->
+					<button onclick="showPopup('Do you wish to save your work till now?', 1)" title="NEW"><i class='bx bxs-file-plus'></i></i></button>
+					<button onclick="fileHandle('pdf')" title="SAVE AS .PDF"><i class='bx bxs-file-pdf'></i></button>
+					<button onclick="fileHandle('txt')" title="SAVE AS .TXT"><i class='bx bxs-file-txt'></i></button>
+					<button onclick="loadFile()" title="Upload"><i class='bx bx-up-arrow-alt'></i></button> <!-- Upload button -->
+					<input type="file" id="file-input" accept=".txt" style="display: none;"onchange="handleFileLoad(event)">
+					<button title="Cook" onclick="cook()"><i class='bx bx-bowl-hot'></i>  <p>COOK</p></button>
+					<select id="genre-selector" title="FLAVOUR">
+						<option value="action" selected="selected">Action</option>
+						<option value="drama">Drama</option>
+						<option value="horror">Horror</option>
+						<option value="sci_fi">Sci Fi</option>
+						<option value="superhero">Superhero</option>
+						<option value="superhero">Thriller</option>
+					</select>
+					<div class="count">
+						WordCount: 
+						<div id="wordcount">0</div>
+					</div>
+					
+					<!-- Font selector dropdown -->
+				</div>
+				<div class="btn-toolbar">
+					<button onclick="formatDoc('undo')" title="UNDO"><i class='bx bx-undo'></i></button>
+					<button onclick="formatDoc('redo')" title="REDO"><i class='bx bx-redo'></i></button>
+					<button onclick="formatDoc('bold')" title="BOLD"><i class='bx bx-bold'></i></button>
+					<button onclick="formatDoc('italic')" title="ITALIC"><i class='bx bx-italic'></i></button>
+					<select id="font-selector" onchange="changeFont(this.value)">
+						<option value="Quattrocento">Quattrocento</option>
+						<option value="Glass Antiqua">Glass Antiqua</option>
+						<option value="Poiret One">Poiret One</option>
+						<option value="Macondo">Macondo</option>
+					</select>
+				</div>
+			</div>
+
+			<div id="content" contenteditable="true" spellcheck="false">
+				Once upon a 
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+		integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="../static/scripts/editor.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+::placeholder {
+    /* color: rgb(255, 255, 255); */
+    opacity: 1; /* Firefox */
+}
+
+:root{
+    --background: white;
+    --buttons: #e6e6e6;
+    --borders: #000;
+    --text: #000;
+    
+    /* --thingback: wheat; */
+}
+
+.darkmode{
+    --background: rgb(21, 21, 21);
+    --buttons: #273036;
+    --borders: #ffffff;
+    --text: #ffffff;
+    --lol: #664a5e;
+    /* --thingback: #710071; */
+}
+
+body{
+    background: var(--background);
+}
+
+@font-face {
+    font-family: alagard;
+    
+    src: url(../fonts/alagard.ttf);
+}
+
+.ui_item{
+    color: var(--text);
+    font-family: alagard;
+    /* font-family: 'Quattrocento'; */
+}
+
+#story-editor {
+    /* color: #f0f0f0; */
+    /* background: rgb(113, 130, 109); */
+    width: 100%;
+    height: 20vh; /* Make the height responsive to the viewport */
+    margin-bottom: 10px;
+    padding: 1%; /* Adding padding that scales with container size */
+}
+
+.button_m{
+    background-color: var(--buttons);
+    margin: 0;
+    /* width: 10vw; */
+    padding-left:  2vw;
+    padding-right: 2vw;
+    height: 10vh;
+    font-size: 2.2vw;
+    border: none;
+    border-radius: 2vh;
+    border-bottom: 0.5vh solid var(--borders);
+}
+
+.button_m:hover{
+    background-color: black;
+    /* background-color: #63036383; */
+    color: var(--background);
+    color: #ff85ff83;
+    
+    transition: color 0.6s, background-color 0.6s;
+    /* color: white; */
+    /* transition: background-color 1s; */
+    /* transition: color 0.8s; */
+
+    /* border-bottom: 1vh solid rgb(87, 51, 51); */
+    /* transition: border-bottom 0.8s; */
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1%; /* Add padding that scales with the viewport */
+}
+
+.headings {
+    font-size: 5vw; /* Set font size based on the viewport width */
+    transition: 0.8s;
+}
+
+.headings:hover{
+    
+    color: rgb(128, 15, 117);
+}
+
+.icon {
+    /* background: url(../images/dividerline.png); */
+    margin-bottom: 1vw;
+    width: 5.5vw; /* Adjust width relative to viewport width */
+    height: auto;
+}
+
+.wave{
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* background: #63636343; */
+
+    /* background: #000000;
+    #273036 */
+}
+
+::selection {
+    background: #710071;
+    color: wheat;
+}
+
+.con{
+    margin: 0;
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+}
+
+.toggle{
+    margin-top: 50px;
+    /* background-color: aqua; */
+    width: 150px;
+    height: 150px;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+}
+
+.toggle::before{
+    
+    position: absolute;
+    content: '';
+    background-color: wheat;
+    width: 90px;
+    height: 90px;
+    border-radius: 200px;
+    margin: 5px;
+    transition: 0.2s;
+}
+
+/* input:checked + .toggle{ */
+    /* background-color: aquamarine; */
+/* } */
+
+input:checked + .toggle::before{
+    background-color: #291845;
+    /* transform: translateX(100px); */
+    /* transform: translate(-20px,20px); */
+}
+#check{
+    display: none;
+}

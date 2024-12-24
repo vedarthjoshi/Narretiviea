@@ -1,0 +1,162 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Jacquard+12&family=Macondo&display=swap'); */
+
+.darkmode {
+    --bg: rgb(21, 21, 21);
+    --text: white;
+    --book-border: rgb(161, 0, 110);
+    --btn-background: rgb(0, 0, 0);
+}
+
+:root {
+    --bg: rgb(230, 230, 230);
+    --text: rgb(0, 0, 0);
+    --book-border: rgb(161, 0, 110);
+    --btn-background: rgb(255, 255, 255);
+}
+
+body {
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+.navigator{
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    position: fixed;
+    left: 4vw;
+    top: 4vh;
+}
+
+.navigator i{
+    font-size: 1.6rem;
+    margin-right: 10px;
+}
+
+.navigator a {
+    font-size: 1.6rem;
+    color: var(--text);
+    text-decoration: none;
+    margin-top: 4vh;
+}
+
+.heading{
+    font-size: 3rem;
+    font-family: alagard;
+    text-align: center;
+}
+
+.heading i{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 2rem;
+    margin-bottom: 10vh;
+    margin-top: 5vh;
+}
+
+#library{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15vw;
+}
+
+.book-item{
+    font-family: 'Quattrocento';
+    /* font-family: 'Poiret One'; */
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 20px;
+    border: 3px double var(--book-border);
+    /* border-left: 20px solid rgb(255, 255, 255);
+    border-top: 1px solid rgb(255, 255, 255); */
+    background-color: var(--btn-background);
+    transition: 0.8s;
+}
+
+.book-item:hover{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--btn-background);
+    background-color: var(--text);
+    border-color: var(--btn-background);
+}
+
+.book-item h3{
+    font-size: 1.5rem;
+}
+
+.book-item button{
+    padding: 10px;
+    font-family: 'Poiret One';
+    font-size: 1.2rem;
+    background-color: var(--btn-background);
+    border: solid;
+    font-weight: bold;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: rgb(128, 0, 255);
+    color: var(--text);
+
+}
+
+.book-item button:hover{
+    cursor: pointer;
+    background: var(--btn-background);
+    color: var(--text);
+    border-color: pink;
+}
+
+.book-item button i{
+    margin-right: 5px;
+}
+
+
+/* TOGGLE */
+.con{
+    margin: 0;
+    display: flex;
+    /* height: 100px; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* height: 100vh; */
+}
+
+.toggle{
+    margin-top: 50px;
+    /* background-color: aqua; */
+    width: 250px;
+    height: 150px;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+}
+
+.toggle::before{
+    
+    position: absolute;
+    content: '';
+    background-color: wheat;
+    width: 90px;
+    height: 90px;
+    border-radius: 200px;
+    margin: 5px;
+    transition: 0.2s;
+}
+
+/* input:checked + .toggle{ */
+    /* background-color: aquamarine; */
+/* } */
+
+input:checked + .toggle::before{
+    background-color: #291845;
+    /* transform: translateX(100px); */
+    /* transform: translate(-20px,20px); */
+}
+#check{
+    display: none;
+}

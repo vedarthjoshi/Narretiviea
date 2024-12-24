@@ -1,0 +1,168 @@
+/* *{
+
+} */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: aliceblue;
+    margin: 0;
+    background:linear-gradient(0deg, rgba(0, 159, 119, 0.819),rgb(255, 255, 255));
+}
+
+.abt-body{
+    background: linear-gradient(0deg,rgba(60, 213, 255, 0.819), rgba(0, 5, 159, 0.819));
+}
+
+.abt-li0,.abt-li1, .abt-li2, .abt-li3,.abt-li4{
+    width: 100px;
+    height: 10px;
+    right: 12px;
+    position: fixed;
+    display: inline-block;
+    background-color: #3be3ef89;
+    color: white;
+    border-style: solid;
+    border-radius: 20px;
+
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1px;
+
+    text-indent: 1000px;
+
+    transition: 0.3s;
+}
+
+.abt-li0{
+    top: 100px;
+}
+
+.abt-li1{
+    top: 180px;
+}
+
+.abt-li2{
+    top: 260px;
+}
+
+.abt-li3{
+    top: 340px;
+}
+.abt-li4{
+    top: 420px;
+}
+
+.abt-li0:hover, .abt-li1:hover, .abt-li2:hover, .abt-li3:hover,.abt-li4:hover{
+    background-color: #00ffa6;
+    cursor: pointer;
+    padding: 10px;
+    transform: scale(20px)
+}
+
+.history{
+    margin: 150px;
+
+    height: 100vh;
+
+    text-align: left;
+    font-size: 30px;
+
+    font-family: 'Poiret One', cursive;
+
+    background: black;
+    color: aliceblue;
+
+    border-radius: 30px;
+    border-style: solid;
+    border-color: rgb(255, 65, 65);
+}
+
+.history-img{
+    padding-left: 200px;
+    padding-top: 100px;
+    width: 10%;
+}
+
+.history-heading{
+    padding-left: 200px;
+}
+
+.history-text{
+    padding-left: 200px;
+    padding-bottom: 200px;
+    padding-right: 200px;
+    line-height: 50px;
+    max-width: 50ch;
+}
+
+.cmd{
+    max-width: inherit;
+    color: brown;
+    font-size: 30px;
+    font-family: monospace;
+}
+
+.work{
+    margin: 150px;
+
+    height: 100vh;
+
+    text-align: left;
+    font-size: 30px;
+
+    font-family: 'Poiret One', cursive;
+
+    background: #176B87;
+    color: aliceblue;
+    /* color: #DAFFFB; */
+
+    border-radius: 30px;
+    border-style: solid;
+    border-color: rgb(255, 65, 65);
+}
+
+.work-heading{
+    padding-left: 200px;
+}
+
+.work-txt{
+    padding-left: 200px;
+    padding-bottom: 200px;
+    padding-right: 200px;
+    line-height: 50px;
+    max-width: 50ch;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+}
+
+.each-link a:link {
+    color: rgb(0, 0, 0);
+}
+
+a:visited {
+    color: rgb(0, 0, 0);
+}
+
+body::-webkit-scrollbar {
+    width: 0.35rem;
+    height: 0.35rem;
+}
+  
+  body::-webkit-scrollbar-track {
+    background: #00ffa6;
+}
+  
+  body::-webkit-scrollbar-thumb {
+    background: #5d00ff;
+}
+::selection {
+    color: rgb(255, 255, 255);
+    background: rgb(128, 27, 116);
+  }
