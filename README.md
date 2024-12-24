@@ -28,7 +28,7 @@ or you can also specify the model path in app.py -> llm
     - `\OpenHermes-2.5-Mistral-7B-GGUF`
       - `\.git` (if downloaded using Git)
       - `.gitattributes` (if downloaded using Git)
-      - `config.json` (if downloaded using Git)
+      - `config.json`  
       - `openhermes-2.5-mistral-7b.Q4_K_M.gguf`
       - `openhermes-2.5-mistral-7b.Q8_0.gguf`
       - `README.md` (if downloaded using Git)
