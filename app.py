@@ -1,3 +1,4 @@
+from pymongo import MongoClient
 from bson import ObjectId
 from flask import Flask, render_template, request, jsonify, url_for, redirect
 from transformers import pipeline
