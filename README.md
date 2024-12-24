@@ -10,11 +10,11 @@ after you clone this repo or download zip and extract it
 you will have a folder Narretiviea-main  
 containing these files  
 
-\models  
-\static  
-\templates  
-app.py  
-README.md  
+`\models`
+`\static`  
+`\templates`  
+`app.py`  
+`README.md`  
 
 so download the model from the [Links](#openhermes-25-mistral-7b-gguf) given above
 
