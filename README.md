@@ -48,4 +48,12 @@ pip install -r requirements.txt
 
 now open the folder in your terminal and run the app.py file.
 
+```bash
 python app.py
+```
+or if you have issues like me
+
+```bash
+py app.py
+```
+
